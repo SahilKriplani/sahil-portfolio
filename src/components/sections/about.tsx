@@ -1,7 +1,7 @@
 import { Briefcase, GraduationCap, MapPin, Sparkles } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
-import { profile, marquee, experience, education } from "@/data/portfolio";
+import { profile, marquee, experience, education, stats } from "@/data/portfolio";
 
 const facts = [
   { icon: Briefcase, label: "Currently", value: experience[0].company },
@@ -53,6 +53,22 @@ export function About() {
           </div>
         </Reveal>
       </div>
+
+      {/* Proof strip — real metrics from shipped work */}
+      <Reveal delay={0.15} className="mt-8">
+        <div className="glass grid grid-cols-2 gap-px overflow-hidden rounded-2xl sm:grid-cols-4">
+          {stats.map((s) => (
+            <div key={s.label} className="p-6 text-center sm:p-7">
+              <div className="text-gradient text-3xl font-bold tracking-tight sm:text-4xl">
+                {s.value}
+              </div>
+              <p className="mt-1.5 text-xs leading-snug text-muted-foreground">
+                {s.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Reveal>
 
       {/* Tech marquee */}
       <div className="relative mt-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">

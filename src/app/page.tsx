@@ -2,6 +2,7 @@ import { Background } from "@/components/background";
 import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
+import { Capabilities } from "@/components/sections/capabilities";
 import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
 import { Experience } from "@/components/sections/experience";
@@ -16,6 +17,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <About />
+        <Capabilities />
         <Skills />
         <Projects />
         <Experience />

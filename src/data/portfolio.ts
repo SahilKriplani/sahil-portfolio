@@ -50,6 +50,64 @@ export const skills = {
   "Currently Learning": ["AI / ML", "LLMs", "DSA", "LLD", "HLD", "Go"],
 } as const;
 
+// ── CAPABILITIES (what I do) ─────────────────────────────────────────────────
+export interface Capability {
+  title: string;
+  blurb: string;
+  points: string[];
+}
+
+export const capabilities: Capability[] = [
+  {
+    title: "Full-Stack Product Engineering",
+    blurb:
+      "Designing and shipping production SaaS end-to-end — React/Next.js front ends wired to typed APIs, with the polish users feel and the architecture teams can maintain.",
+    points: [
+      "React, Next.js & TypeScript UIs with reusable design systems",
+      "Server components, code-splitting & memoisation for speed",
+      "Accessible, responsive interfaces that ship fast",
+    ],
+  },
+  {
+    title: "Backend & APIs",
+    blurb:
+      "RESTful microservices and data layers built to scale — auth, integrations, and the unglamorous reliability work that keeps products up.",
+    points: [
+      "Node.js / Express & Python / FastAPI services",
+      "JWT / OAuth2 auth across 5+ third-party integrations",
+      "PostgreSQL & MongoDB schema design and query optimisation",
+    ],
+  },
+  {
+    title: "AI-Powered Features",
+    blurb:
+      "Turning models into product — OCR pipelines, RAG assistants and AI workflows wired into real user flows, not demos.",
+    points: [
+      "OCR extraction pipelines (~92% field accuracy)",
+      "RAG over vector DBs with grounded, cited answers",
+      "LLM features wired into production UX",
+    ],
+  },
+  {
+    title: "DevOps & Deployment",
+    blurb:
+      "Ship continuously and sleep at night — Dockerised CI/CD, cloud infra and zero-downtime releases.",
+    points: [
+      "AWS (EC2, S3, RDS) & Azure deployments",
+      "Dockerised GitHub Actions CI/CD pipelines",
+      "Nginx, monitoring & zero-downtime releases",
+    ],
+  },
+];
+
+// ── STATS (proof strip — real numbers from shipped work) ─────────────────────
+export const stats = [
+  { value: "~92%", label: "OCR extraction accuracy" },
+  { value: "~40%", label: "API latency reduced" },
+  { value: "~30%", label: "Faster page loads" },
+  { value: "5+", label: "Integrations shipped" },
+] as const;
+
 // ── TECH MARQUEE (logos/names that scroll) ───────────────────────────────────
 export const marquee = [
   "React", "Next.js", "TypeScript", "Node.js", "Python", "FastAPI",
